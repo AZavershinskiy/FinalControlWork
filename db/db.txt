@@ -1,0 +1,4 @@
+Meower;22.07.2016;eat/;Pet;Cat
+Hermit;5.05.2020;Stay/Down/Go/Stop/;Pack;Camel
+Jack;11.03.2022;Go/Stop/;Pack;Horse
+Woofer;28.02.2023;Sit/Speak/Eat/Stop/;Pet;Dog
