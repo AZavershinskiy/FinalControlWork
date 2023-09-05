@@ -5,7 +5,7 @@ import impl.CountImpl;
 import java.io.*;
 
 public class Counter implements CountImpl, AutoCloseable {
-    String path = "db/counter.txt";
+    String path = "Java/db/counter.txt";
     Integer count;
     BufferedReader br;
     FileWriter fw;

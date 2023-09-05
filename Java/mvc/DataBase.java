@@ -7,7 +7,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 public class DataBase implements DBImpl {
-    String path = "db/db.txt";
+    String path = "Java/db/db.txt";
 
     @Override
     public void save(Registry registry) throws IOException {
