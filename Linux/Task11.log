@@ -1,0 +1,109 @@
+Task 11:
+mysql> create table `young_animals` (
+    -> id int unsigned not null auto_increment primary key,
+    -> `name` varchar(50) not null,
+    -> `species` varchar(20) not null,
+    -> `age_months` int not null
+    -> );
+Query OK, 0 rows affected (0,04 sec)
+
+mysql> show tables from mans_friends;
++------------------------+
+| Tables_in_mans_friends |
++------------------------+
+| animals                |
+| cats                   |
+| dogs                   |
+| donkeys                |
+| hamsters               |
+| horses                 |
+| horses_donkeys         |
+| young_animals          |
++------------------------+
+8 rows in set (0,00 sec)
+
+mysql> insert into `young_animals` (`name`, `species`, `age_months`)
+    -> select `name`, 'dog' as `species`, timestampdiff(month, `birthday`, curdate()) as `age_months`
+    -> from `dogs`
+    -> where `birthday` <= date_sub(curdate(), interval 1 year) and `birthday` >= date_sub(curdate(), interval 3 year);
+Query OK, 1 row affected (0,02 sec)
+Records: 1  Duplicates: 0  Warnings: 0
+
+mysql> select * from young_animals;
++----+-------+---------+------------+
+| id | name  | species | age_months |
++----+-------+---------+------------+
+|  1 | Doony | dog     |         29 |
++----+-------+---------+------------+
+1 row in set (0,00 sec)
+
+mysql> insert into `young_animals` (`name`, `species`, `age_months`)
+    -> select `name`, 'cat' as `species`, timestampdiff(month, `birthday`, curdate()) as `age_months`
+    -> from `cats`
+    -> where `birthday` <= date_sub(curdate(), interval 1 year) and `birthday` >= date_sub(curdate(), interval 3 year);
+Query OK, 1 row affected (0,02 sec)
+Records: 1  Duplicates: 0  Warnings: 0
+
+mysql> select * from young_animals;
++----+-------+---------+------------+
+| id | name  | species | age_months |
++----+-------+---------+------------+
+|  1 | Doony | dog     |         29 |
+|  2 | Axel  | cat     |         22 |
++----+-------+---------+------------+
+2 rows in set (0,00 sec)
+
+mysql> insert into `young_animals` (`name`, `species`, `age_months`)
+    -> select `name`, 'donkey' as `species`, timestampdiff(month, `birthday`, curdate()) as `age_months`
+    -> from `donkeys`
+    -> where `birthday` <= date_sub(curdate(), interval 1 year) and `birthday` >= date_sub(curdate(), interval 3 year);
+Query OK, 2 rows affected (0,02 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> select * from young_animals;
++----+-------+---------+------------+
+| id | name  | species | age_months |
++----+-------+---------+------------+
+|  1 | Doony | dog     |         29 |
+|  2 | Axel  | cat     |         22 |
+|  3 | Bob   | donkey  |         21 |
+|  4 | Moon  | donkey  |         22 |
++----+-------+---------+------------+
+4 rows in set (0,00 sec)
+
+mysql> insert into `young_animals` (`name`, `species`, `age_months`)
+    -> select `name`, 'hamster' as `species`, timestampdiff(month, `birthday`, curdate()) as `age_months`
+    -> from `hamsters`
+    -> where `birthday` <= date_sub(curdate(), interval 1 year) and `birthday` >= date_sub(curdate(), interval 3 year);
+Query OK, 0 rows affected (0,00 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> select * from young_animals;
++----+-------+---------+------------+
+| id | name  | species | age_months |
++----+-------+---------+------------+
+|  1 | Doony | dog     |         29 |
+|  2 | Axel  | cat     |         22 |
+|  3 | Bob   | donkey  |         21 |
+|  4 | Moon  | donkey  |         22 |
++----+-------+---------+------------+
+4 rows in set (0,00 sec)
+
+mysql> insert into `young_animals` (`name`, `species`, `age_months`)
+    -> select `name`, 'horse' as `species`, timestampdiff(month, `birthday`, curdate()) as `age_months`
+    -> from `horses`
+    -> where `birthday` <= date_sub(curdate(), interval 1 year) and `birthday` >= date_sub(curdate(), interval 3 year);
+Query OK, 1 row affected (0,01 sec)
+Records: 1  Duplicates: 0  Warnings: 0
+
+mysql> select * from young_animals;
++----+--------+---------+------------+
+| id | name   | species | age_months |
++----+--------+---------+------------+
+|  1 | Doony  | dog     |         29 |
+|  2 | Axel   | cat     |         22 |
+|  3 | Bob    | donkey  |         21 |
+|  4 | Moon   | donkey  |         22 |
+|  6 | Whisky | horse   |         25 |
++----+--------+---------+------------+
+5 rows in set (0,00 sec)

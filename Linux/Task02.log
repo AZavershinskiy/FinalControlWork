@@ -1,0 +1,21 @@
+Task 2:
+andrey@utm-vm:~/fcw$ mkdir animals
+
+andrey@utm-vm:~/fcw$ ls -l
+total 12
+drwxrwxr-x 2 andrey andrey 4096 сен  4 17:01 animals
+-rw-rw-r-- 1 andrey andrey   45 сен  4 16:52 mens_friends
+-rw-rw-r-- 1 andrey andrey   21 сен  4 16:37 pet
+
+andrey@utm-vm:~/fcw$ mv mens_friends animals/
+
+andrey@utm-vm:~/fcw$ ls -l
+total 8
+drwxrwxr-x 2 andrey andrey 4096 сен  4 17:03 animals
+-rw-rw-r-- 1 andrey andrey   21 сен  4 16:37 pet
+
+andrey@utm-vm:~/fcw$ cd animals/
+
+andrey@utm-vm:~/fcw/animals$ ls -l
+total 4
+-rw-rw-r-- 1 andrey andrey 45 сен  4 16:52 mens_friends

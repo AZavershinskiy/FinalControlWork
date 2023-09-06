@@ -1,8 +1,11 @@
 package mvc;
 
-import impl.CountImpl;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 
-import java.io.*;
+import impl.CountImpl;
 
 public class Counter implements CountImpl, AutoCloseable {
     String path = "Java/db/counter.txt";

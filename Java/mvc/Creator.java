@@ -1,11 +1,21 @@
 package mvc;
 
-import animals.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+import java.util.List;
+
+import animals.Animal;
+import animals.Camel;
+import animals.Cat;
+import animals.Dog;
+import animals.Donkey;
+import animals.Hamster;
+import animals.Horse;
 import exceptions.BirthdayException;
 import impl.CreateImpl;
 import impl.ParseImpl;
-
-import java.util.*;
 
 public class Creator implements CreateImpl, ParseImpl {
     Checker checker;

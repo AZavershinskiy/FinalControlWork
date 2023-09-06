@@ -1,0 +1,29 @@
+Task 5:
+andrey@utm-vm:~/fcw$ history
+10  mkdir fcw
+11  cd fcw/
+12  ls -l
+13  cat > pet
+14  cat pet
+15  cat > pack
+16  cat pack 
+17  cat pet >> pack 
+18  cat pack 
+19  mv pack mens_friends
+20  ls -l
+21  mkdir animals
+22  ls -l
+23  mv mens_friends animals/
+24  ls -l
+25  cd animals/
+26  ls -l
+27  cd -
+28  sudo apt update
+29  apt install mysql-server
+30  sudo apt install mysql-server
+31  sudo apt update
+32  wget https://dev.mysql.com/get/mysql-apt-config_0.8.25-1_all.deb
+33  dpkg -i mysql-apt-config_0.8.25-1_all.deb
+34  sudo dpkg -i mysql-apt-config_0.8.25-1_all.deb
+35  sudo dpkg -r mysql-apt-config
+36  history

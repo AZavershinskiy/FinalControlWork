@@ -1,0 +1,235 @@
+Task 3:
+andrey@utm-vm:~/fcw$ sudo apt update
+[sudo] password for andrey: 
+Hit:1 https://download.docker.com/linux/ubuntu jammy InRelease
+Hit:2 http://ru.ports.ubuntu.com/ubuntu-ports jammy InRelease
+Hit:3 http://ports.ubuntu.com/ubuntu-ports jammy-security InRelease
+Hit:4 http://ru.ports.ubuntu.com/ubuntu-ports jammy-updates InRelease
+Hit:5 http://ports.ubuntu.com/ubuntu-ports jammy-proposed InRelease
+Hit:6 http://ru.ports.ubuntu.com/ubuntu-ports jammy-backports InRelease
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+All packages are up to date.
+
+andrey@utm-vm:~/fcw$ apt install mysql-server
+E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?
+
+andrey@utm-vm:~/fcw$ sudo !!
+sudo apt install mysql-server
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  libcgi-fast-perl libcgi-pm-perl libevent-core-2.1-7 libevent-pthreads-2.1-7 libfcgi-bin
+  libfcgi-perl libfcgi0ldbl libhtml-template-perl libmecab2 libprotobuf-lite23 mecab-ipadic
+  mecab-ipadic-utf8 mecab-utils mysql-client-8.0 mysql-client-core-8.0 mysql-common mysql-server-8.0
+  mysql-server-core-8.0
+Suggested packages:
+  libipc-sharedcache-perl mailx tinyca
+The following NEW packages will be installed:
+  libcgi-fast-perl libcgi-pm-perl libevent-core-2.1-7 libevent-pthreads-2.1-7 libfcgi-bin
+  libfcgi-perl libfcgi0ldbl libhtml-template-perl libmecab2 libprotobuf-lite23 mecab-ipadic
+  mecab-ipadic-utf8 mecab-utils mysql-client-8.0 mysql-client-core-8.0 mysql-common mysql-server
+  mysql-server-8.0 mysql-server-core-8.0
+0 upgraded, 19 newly installed, 0 to remove and 0 not upgraded.
+Need to get 28,8 MB of archives.
+After this operation, 237 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://ru.ports.ubuntu.com/ubuntu-ports jammy/main arm64 mysql-common all 5.8+1.0.8 [7 212 B]
+Get:2 http://ru.ports.ubuntu.com/ubuntu-ports jammy-updates/main arm64 mysql-client-core-8.0 arm64 8.0.34-0ubuntu0.22.04.1 [2 973 kB]
+Get:3 http://ru.ports.ubuntu.com/ubuntu-ports jammy-updates/main arm64 mysql-client-8.0 arm64 8.0.34-0ubuntu0.22.04.1 [22,7 kB]
+Get:4 http://ru.ports.ubuntu.com/ubuntu-ports jammy/main arm64 libevent-core-2.1-7 arm64 2.1.12-stable-1build3 [91,1 kB]
+Get:5 http://ru.ports.ubuntu.com/ubuntu-ports jammy/main arm64 libevent-pthreads-2.1-7 arm64 2.1.12-stable-1build3 [7 588 B]
+Get:6 http://ru.ports.ubuntu.com/ubuntu-ports jammy/main arm64 libmecab2 arm64 0.996-14build9 [188 kB]
+Get:7 http://ru.ports.ubuntu.com/ubuntu-ports jammy-updates/main arm64 libprotobuf-lite23 arm64 3.12.4-1ubuntu7.22.04.1 [192 kB]
+Get:8 http://ru.ports.ubuntu.com/ubuntu-ports jammy-updates/main arm64 mysql-server-core-8.0 arm64 8.0.34-0ubuntu0.22.04.1 [17,0 MB]
+Get:9 http://ru.ports.ubuntu.com/ubuntu-ports jammy-updates/main arm64 mysql-server-8.0 arm64 8.0.34-0ubuntu0.22.04.1 [1 237 kB]
+Get:10 http://ru.ports.ubuntu.com/ubuntu-ports jammy/main arm64 libcgi-pm-perl all 4.54-1 [188 kB]   
+Get:11 http://ru.ports.ubuntu.com/ubuntu-ports jammy/main arm64 libfcgi0ldbl arm64 2.4.2-2build2 [28,0 kB]
+Get:12 http://ru.ports.ubuntu.com/ubuntu-ports jammy/main arm64 libfcgi-perl arm64 0.82+ds-1build1 [22,3 kB]
+Get:13 http://ru.ports.ubuntu.com/ubuntu-ports jammy/main arm64 libcgi-fast-perl all 1:2.15-1 [10,5 kB]
+Get:14 http://ru.ports.ubuntu.com/ubuntu-ports jammy/main arm64 libfcgi-bin arm64 2.4.2-2build2 [10,7 kB]
+Get:15 http://ru.ports.ubuntu.com/ubuntu-ports jammy/main arm64 libhtml-template-perl all 2.97-1.1 [59,1 kB]
+Get:16 http://ru.ports.ubuntu.com/ubuntu-ports jammy/main arm64 mecab-utils arm64 0.996-14build9 [4 830 B]
+Get:17 http://ru.ports.ubuntu.com/ubuntu-ports jammy/main arm64 mecab-ipadic all 2.7.0-20070801+main-3 [6 718 kB]
+Get:18 http://ru.ports.ubuntu.com/ubuntu-ports jammy/main arm64 mecab-ipadic-utf8 all 2.7.0-20070801+main-3 [4 384 B]
+Get:19 http://ru.ports.ubuntu.com/ubuntu-ports jammy-updates/main arm64 mysql-server all 8.0.34-0ubuntu0.22.04.1 [9 460 B]
+Fetched 28,8 MB in 27s (1 067 kB/s)                                                                  
+Preconfiguring packages ...
+Selecting previously unselected package mysql-common.
+(Reading database ... 195454 files and directories currently installed.)
+Preparing to unpack .../0-mysql-common_5.8+1.0.8_all.deb ...
+Unpacking mysql-common (5.8+1.0.8) ...
+Selecting previously unselected package mysql-client-core-8.0.
+Preparing to unpack .../1-mysql-client-core-8.0_8.0.34-0ubuntu0.22.04.1_arm64.deb ...
+Unpacking mysql-client-core-8.0 (8.0.34-0ubuntu0.22.04.1) ...
+Selecting previously unselected package mysql-client-8.0.
+Preparing to unpack .../2-mysql-client-8.0_8.0.34-0ubuntu0.22.04.1_arm64.deb ...
+Unpacking mysql-client-8.0 (8.0.34-0ubuntu0.22.04.1) ...
+Selecting previously unselected package libevent-core-2.1-7:arm64.
+Preparing to unpack .../3-libevent-core-2.1-7_2.1.12-stable-1build3_arm64.deb ...
+Unpacking libevent-core-2.1-7:arm64 (2.1.12-stable-1build3) ...
+Selecting previously unselected package libevent-pthreads-2.1-7:arm64.
+Preparing to unpack .../4-libevent-pthreads-2.1-7_2.1.12-stable-1build3_arm64.deb ...
+Unpacking libevent-pthreads-2.1-7:arm64 (2.1.12-stable-1build3) ...
+Selecting previously unselected package libmecab2:arm64.
+Preparing to unpack .../5-libmecab2_0.996-14build9_arm64.deb ...
+Unpacking libmecab2:arm64 (0.996-14build9) ...
+Selecting previously unselected package libprotobuf-lite23:arm64.
+Preparing to unpack .../6-libprotobuf-lite23_3.12.4-1ubuntu7.22.04.1_arm64.deb ...
+Unpacking libprotobuf-lite23:arm64 (3.12.4-1ubuntu7.22.04.1) ...
+Selecting previously unselected package mysql-server-core-8.0.
+Preparing to unpack .../7-mysql-server-core-8.0_8.0.34-0ubuntu0.22.04.1_arm64.deb ...
+Unpacking mysql-server-core-8.0 (8.0.34-0ubuntu0.22.04.1) ...
+Setting up mysql-common (5.8+1.0.8) ...
+update-alternatives: using /etc/mysql/my.cnf.fallback to provide /etc/mysql/my.cnf (my.cnf) in auto mode
+Selecting previously unselected package mysql-server-8.0.
+(Reading database ... 195673 files and directories currently installed.)
+Preparing to unpack .../00-mysql-server-8.0_8.0.34-0ubuntu0.22.04.1_arm64.deb ...
+Unpacking mysql-server-8.0 (8.0.34-0ubuntu0.22.04.1) ...
+Selecting previously unselected package libcgi-pm-perl.
+Preparing to unpack .../01-libcgi-pm-perl_4.54-1_all.deb ...
+Unpacking libcgi-pm-perl (4.54-1) ...
+Selecting previously unselected package libfcgi0ldbl:arm64.
+Preparing to unpack .../02-libfcgi0ldbl_2.4.2-2build2_arm64.deb ...
+Unpacking libfcgi0ldbl:arm64 (2.4.2-2build2) ...
+Selecting previously unselected package libfcgi-perl:arm64.
+Preparing to unpack .../03-libfcgi-perl_0.82+ds-1build1_arm64.deb ...
+Unpacking libfcgi-perl:arm64 (0.82+ds-1build1) ...
+Selecting previously unselected package libcgi-fast-perl.
+Preparing to unpack .../04-libcgi-fast-perl_1%3a2.15-1_all.deb ...
+Unpacking libcgi-fast-perl (1:2.15-1) ...
+Selecting previously unselected package libfcgi-bin.
+Preparing to unpack .../05-libfcgi-bin_2.4.2-2build2_arm64.deb ...
+Unpacking libfcgi-bin (2.4.2-2build2) ...
+Selecting previously unselected package libhtml-template-perl.
+Preparing to unpack .../06-libhtml-template-perl_2.97-1.1_all.deb ...
+Unpacking libhtml-template-perl (2.97-1.1) ...
+Selecting previously unselected package mecab-utils.
+Preparing to unpack .../07-mecab-utils_0.996-14build9_arm64.deb ...
+Unpacking mecab-utils (0.996-14build9) ...
+Selecting previously unselected package mecab-ipadic.
+Preparing to unpack .../08-mecab-ipadic_2.7.0-20070801+main-3_all.deb ...
+Unpacking mecab-ipadic (2.7.0-20070801+main-3) ...
+Selecting previously unselected package mecab-ipadic-utf8.
+Preparing to unpack .../09-mecab-ipadic-utf8_2.7.0-20070801+main-3_all.deb ...
+Unpacking mecab-ipadic-utf8 (2.7.0-20070801+main-3) ...
+Selecting previously unselected package mysql-server.
+Preparing to unpack .../10-mysql-server_8.0.34-0ubuntu0.22.04.1_all.deb ...
+Unpacking mysql-server (8.0.34-0ubuntu0.22.04.1) ...
+Setting up libmecab2:arm64 (0.996-14build9) ...
+Setting up mysql-client-core-8.0 (8.0.34-0ubuntu0.22.04.1) ...
+Setting up libfcgi0ldbl:arm64 (2.4.2-2build2) ...
+Setting up libcgi-pm-perl (4.54-1) ...
+Setting up libfcgi-bin (2.4.2-2build2) ...
+Setting up libhtml-template-perl (2.97-1.1) ...
+Setting up libprotobuf-lite23:arm64 (3.12.4-1ubuntu7.22.04.1) ...
+Setting up mecab-utils (0.996-14build9) ...
+Setting up libevent-core-2.1-7:arm64 (2.1.12-stable-1build3) ...
+Setting up mysql-client-8.0 (8.0.34-0ubuntu0.22.04.1) ...
+Setting up libfcgi-perl:arm64 (0.82+ds-1build1) ...
+Setting up libevent-pthreads-2.1-7:arm64 (2.1.12-stable-1build3) ...
+Setting up mecab-ipadic (2.7.0-20070801+main-3) ...
+Compiling IPA dictionary for Mecab.  This takes long time...
+reading /usr/share/mecab/dic/ipadic/unk.def ... 40
+emitting double-array: 100% |###########################################| 
+/usr/share/mecab/dic/ipadic/model.def is not found. skipped.
+reading /usr/share/mecab/dic/ipadic/Adj.csv ... 27210
+reading /usr/share/mecab/dic/ipadic/Noun.csv ... 60477
+reading /usr/share/mecab/dic/ipadic/Noun.others.csv ... 151
+reading /usr/share/mecab/dic/ipadic/Adverb.csv ... 3032
+reading /usr/share/mecab/dic/ipadic/Suffix.csv ... 1393
+reading /usr/share/mecab/dic/ipadic/Noun.org.csv ... 16668
+reading /usr/share/mecab/dic/ipadic/Auxil.csv ... 199
+reading /usr/share/mecab/dic/ipadic/Postp-col.csv ... 91
+reading /usr/share/mecab/dic/ipadic/Noun.place.csv ... 72999
+reading /usr/share/mecab/dic/ipadic/Noun.adjv.csv ... 3328
+reading /usr/share/mecab/dic/ipadic/Noun.nai.csv ... 42
+reading /usr/share/mecab/dic/ipadic/Interjection.csv ... 252
+reading /usr/share/mecab/dic/ipadic/Noun.verbal.csv ... 12146
+reading /usr/share/mecab/dic/ipadic/Noun.name.csv ... 34202
+reading /usr/share/mecab/dic/ipadic/Verb.csv ... 130750
+reading /usr/share/mecab/dic/ipadic/Others.csv ... 2
+reading /usr/share/mecab/dic/ipadic/Prefix.csv ... 221
+reading /usr/share/mecab/dic/ipadic/Conjunction.csv ... 171
+reading /usr/share/mecab/dic/ipadic/Adnominal.csv ... 135
+reading /usr/share/mecab/dic/ipadic/Symbol.csv ... 208
+reading /usr/share/mecab/dic/ipadic/Noun.demonst.csv ... 120
+reading /usr/share/mecab/dic/ipadic/Noun.proper.csv ... 27328
+reading /usr/share/mecab/dic/ipadic/Postp.csv ... 146
+reading /usr/share/mecab/dic/ipadic/Filler.csv ... 19
+reading /usr/share/mecab/dic/ipadic/Noun.adverbal.csv ... 795
+reading /usr/share/mecab/dic/ipadic/Noun.number.csv ... 42
+emitting double-array: 100% |###########################################| 
+reading /usr/share/mecab/dic/ipadic/matrix.def ... 1316x1316
+emitting matrix      : 100% |###########################################| 
+
+done!
+update-alternatives: using /var/lib/mecab/dic/ipadic to provide /var/lib/mecab/dic/debian (mecab-dictionary) in auto mode
+Setting up libcgi-fast-perl (1:2.15-1) ...
+Setting up mysql-server-core-8.0 (8.0.34-0ubuntu0.22.04.1) ...
+Setting up mecab-ipadic-utf8 (2.7.0-20070801+main-3) ...
+Compiling IPA dictionary for Mecab.  This takes long time...
+reading /usr/share/mecab/dic/ipadic/unk.def ... 40
+emitting double-array: 100% |###########################################| 
+/usr/share/mecab/dic/ipadic/model.def is not found. skipped.
+reading /usr/share/mecab/dic/ipadic/Adj.csv ... 27210
+reading /usr/share/mecab/dic/ipadic/Noun.csv ... 60477
+reading /usr/share/mecab/dic/ipadic/Noun.others.csv ... 151
+reading /usr/share/mecab/dic/ipadic/Adverb.csv ... 3032
+reading /usr/share/mecab/dic/ipadic/Suffix.csv ... 1393
+reading /usr/share/mecab/dic/ipadic/Noun.org.csv ... 16668
+reading /usr/share/mecab/dic/ipadic/Auxil.csv ... 199
+reading /usr/share/mecab/dic/ipadic/Postp-col.csv ... 91
+reading /usr/share/mecab/dic/ipadic/Noun.place.csv ... 72999
+reading /usr/share/mecab/dic/ipadic/Noun.adjv.csv ... 3328
+reading /usr/share/mecab/dic/ipadic/Noun.nai.csv ... 42
+reading /usr/share/mecab/dic/ipadic/Interjection.csv ... 252
+reading /usr/share/mecab/dic/ipadic/Noun.verbal.csv ... 12146
+reading /usr/share/mecab/dic/ipadic/Noun.name.csv ... 34202
+reading /usr/share/mecab/dic/ipadic/Verb.csv ... 130750
+reading /usr/share/mecab/dic/ipadic/Others.csv ... 2
+reading /usr/share/mecab/dic/ipadic/Prefix.csv ... 221
+reading /usr/share/mecab/dic/ipadic/Conjunction.csv ... 171
+reading /usr/share/mecab/dic/ipadic/Adnominal.csv ... 135
+reading /usr/share/mecab/dic/ipadic/Symbol.csv ... 208
+reading /usr/share/mecab/dic/ipadic/Noun.demonst.csv ... 120
+reading /usr/share/mecab/dic/ipadic/Noun.proper.csv ... 27328
+reading /usr/share/mecab/dic/ipadic/Postp.csv ... 146
+reading /usr/share/mecab/dic/ipadic/Filler.csv ... 19
+reading /usr/share/mecab/dic/ipadic/Noun.adverbal.csv ... 795
+reading /usr/share/mecab/dic/ipadic/Noun.number.csv ... 42
+emitting double-array: 100% |###########################################| 
+reading /usr/share/mecab/dic/ipadic/matrix.def ... 1316x1316
+emitting matrix      : 100% |###########################################| 
+
+done!
+update-alternatives: using /var/lib/mecab/dic/ipadic-utf8 to provide /var/lib/mecab/dic/debian (mecab-dictionary) in auto mode
+Setting up mysql-server-8.0 (8.0.34-0ubuntu0.22.04.1) ...
+update-alternatives: using /etc/mysql/mysql.cnf to provide /etc/mysql/my.cnf (my.cnf) in auto mode
+Renaming removed key_buffer and myisam-recover options (if present)
+mysqld will log errors to /var/log/mysql/error.log
+mysqld is running as pid 5669
+Created symlink /etc/systemd/system/multi-user.target.wants/mysql.service → /lib/systemd/system/mysql.service.
+Setting up mysql-server (8.0.34-0ubuntu0.22.04.1) ...
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.3) ...
+
+andrey@utm-vm:~/fcw$ wget https://dev.mysql.com/get/mysql-apt-config_0.8.25-1_all.deb
+--2023-09-04 17:22:53--  https://dev.mysql.com/get/mysql-apt-config_0.8.25-1_all.deb
+Resolving dev.mysql.com (dev.mysql.com)... 23.61.243.80, 2001:2030:21:1a9::2e31, 2001:2030:21:19e::2e31
+Connecting to dev.mysql.com (dev.mysql.com)|23.61.243.80|:443... connected.
+HTTP request sent, awaiting response... 302 Moved Temporarily
+Location: https://repo.mysql.com//mysql-apt-config_0.8.25-1_all.deb [following]
+--2023-09-04 17:22:54--  https://repo.mysql.com//mysql-apt-config_0.8.25-1_all.deb
+Resolving repo.mysql.com (repo.mysql.com)... 184.50.200.228, 2a02:26f0:9500:b83::1d68, 2a02:26f0:9500:b8a::1d68
+Connecting to repo.mysql.com (repo.mysql.com)|184.50.200.228|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 18120 (18K) [application/x-debian-package]
+Saving to: ‘mysql-apt-config_0.8.25-1_all.deb.2’
+
+mysql-apt-config_0.8.25-1_all.d 100%[======================================================>]  17,70K  --.-KB/s    in 0s      
+
+2023-09-04 17:22:54 (78,5 MB/s) - ‘mysql-apt-config_0.8.25-1_all.deb.2’ saved [18120/18120]

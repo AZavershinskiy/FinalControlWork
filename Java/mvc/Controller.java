@@ -1,11 +1,21 @@
 package mvc;
 
-import animals.Animal;
-import exceptions.*;
-import impl.Ctrl;
-
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.InputMismatchException;
+import java.util.List;
+
+import animals.Animal;
+import exceptions.AnimalChoiceException;
+import exceptions.BirthdayException;
+import exceptions.CommandException;
+import exceptions.EnterChoiceException;
+import exceptions.KindException;
+import exceptions.NameException;
+import exceptions.QuestionException;
+import exceptions.TypeException;
+import impl.Ctrl;
 
 public class Controller implements Ctrl {
     private View ui;

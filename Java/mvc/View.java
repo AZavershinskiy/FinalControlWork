@@ -1,11 +1,11 @@
 package mvc;
 
+import java.util.List;
+
 import animals.Animal;
 import impl.ErrorView;
 import impl.Info;
 import impl.Menu;
-
-import java.util.List;
 
 public class View implements Menu, ErrorView, Info {
     private String mainMenu;
@@ -76,12 +76,12 @@ public class View implements Menu, ErrorView, Info {
 
     @Override
     public void enterType() {
-        System.out.print("Enter type: ");
+        System.out.print("Enter type (pet/pack): ");
     }
 
     @Override
     public void enterKind() {
-        System.out.print("Enter kind: ");
+        System.out.print("Enter kind (cat/dog/hamster or camel/donkey/horse): ");
     }
 
     @Override

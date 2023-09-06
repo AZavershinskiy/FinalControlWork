@@ -1,10 +1,10 @@
 package impl;
 
-import exceptions.EnterChoiceException;
-
 import java.util.Calendar;
 import java.util.InputMismatchException;
 import java.util.List;
+
+import exceptions.EnterChoiceException;
 
 public interface Enter {
     int enterChoice() throws InputMismatchException, EnterChoiceException;

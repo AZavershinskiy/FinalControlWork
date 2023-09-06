@@ -1,9 +1,20 @@
 package mvc;
 
-import exceptions.*;
-import impl.Enter;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+import java.util.InputMismatchException;
+import java.util.List;
+import java.util.Scanner;
 
-import java.util.*;
+import exceptions.AnimalChoiceException;
+import exceptions.BirthdayException;
+import exceptions.CommandException;
+import exceptions.EnterChoiceException;
+import exceptions.KindException;
+import exceptions.NameException;
+import exceptions.QuestionException;
+import exceptions.TypeException;
+import impl.Enter;
 
 public class Writer implements Enter {
     Checker checker;

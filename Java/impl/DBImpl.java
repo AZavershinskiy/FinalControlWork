@@ -1,8 +1,8 @@
 package impl;
 
-import mvc.Registry;
-
 import java.io.IOException;
+
+import mvc.Registry;
 
 public interface DBImpl {
     void save(Registry registry) throws IOException;

@@ -1,0 +1,80 @@
+Task 8:
+mysql> create table `animals` (
+    -> id int unsigned not null auto_increment primary key unique,
+    -> animals_class varchar(30)
+    -> );
+Query OK, 0 rows affected (0,03 sec)
+
+mysql> create table `dogs` (
+    -> id int unsigned not null auto_increment unique,
+    -> `name` varchar(50) not null,
+    -> `commands` varchar(100) not null,
+    -> `birthday` date not null,
+    -> `animals_class_id` int unsigned not null,
+    -> foreign key (`animals_class_id`) references `animals` (`id`) on delete cascade
+    -> );
+Query OK, 0 rows affected (0,04 sec)
+
+create table `cats` (
+    -> id int unsigned not null auto_increment unique,
+    -> `name` varchar(50) not null,
+    -> `commands` varchar(100) not null,
+    -> `birthday` date not null,
+    -> `animals_class_id` int unsigned not null,
+    -> foreign key (`animals_class_id`) references `animals` (`id`) on delete cascade
+    -> );
+Query OK, 0 rows affected (0,05 sec)
+
+mysql> create table `hamsters` (
+    -> id int unsigned not null auto_increment unique,
+    -> `name` varchar(50) not null,
+    -> `commands` varchar(100) not null,
+    -> `birthday` date not null,
+    -> `animals_class_id` int unsigned not null,
+    -> foreign key (`animals_class_id`) references `animals` (`id`) on delete cascade
+    -> );
+Query OK, 0 rows affected (0,04 sec)
+
+mysql> create table `horses` (
+    -> id int unsigned not null auto_increment unique,
+    -> `name` varchar(50) not null,
+    -> `commands` varchar(100) not null,
+    -> `birthday` date not null,
+    -> `animals_class_id` int unsigned not null,
+    -> foreign key (`animals_class_id`) references `animals` (`id`) on delete cascade
+    -> );
+Query OK, 0 rows affected (0,04 sec)
+
+mysql> create table `camels` (
+    -> id int unsigned not null auto_increment unique,
+    -> `name` varchar(50) not null,
+    -> `commands` varchar(100) not null,
+    -> `birthday` date not null,
+    -> `animals_class_id` int unsigned not null,
+    -> foreign key (`animals_class_id`) references `animals` (`id`) on delete cascade
+    -> );
+Query OK, 0 rows affected (0,06 sec)
+
+mysql> create table `donkeys` (
+    -> id int unsigned not null auto_increment unique,
+    -> `name` varchar(50) not null,
+    -> `commands` varchar(100) not null,
+    -> `birthday` date not null,
+    -> `animals_class_id` int unsigned not null,
+    -> foreign key (`animals_class_id`) references `animals` (`id`) on delete cascade
+    -> );
+Query OK, 0 rows affected (0,04 sec)
+
+mysql> show tables from mans_friends;
++------------------------+
+| Tables_in_mans_friends |
++------------------------+
+| animals                |
+| camels                 |
+| cats                   |
+| dogs                   |
+| donkeys                |
+| hamsters               |
+| horses                 |
++------------------------+
+7 rows in set (0,00 sec)

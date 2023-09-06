@@ -1,0 +1,15 @@
+Task 4:
+andrey@utm-vm:~/fcw$ dpkg -i mysql-apt-config_0.8.25-1_all.deb
+dpkg: error: requested operation requires superuser privilege
+
+andrey@utm-vm:~/fcw$ sudo !!
+sudo dpkg -i mysql-apt-config_0.8.25-1_all.deb
+Selecting previously unselected package mysql-apt-config.
+(Reading database ... 195840 files and directories currently installed.)
+Preparing to unpack mysql-apt-config_0.8.25-1_all.deb ...
+Unpacking mysql-apt-config (0.8.25-1) ...
+Setting up mysql-apt-config (0.8.25-1) ...
+
+andrey@utm-vm:~/fcw$ sudo dpkg -r mysql-apt-config
+(Reading database ... 195845 files and directories currently installed.)
+Removing mysql-apt-config (0.8.25-1) ...

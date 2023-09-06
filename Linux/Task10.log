@@ -1,0 +1,75 @@
+Task 10:
+mysql> drop table `camels`;
+Query OK, 0 rows affected (0,04 sec)
+
+mysql> show tables from mans_friends;
++------------------------+
+| Tables_in_mans_friends |
++------------------------+
+| animals                |
+| cats                   |
+| dogs                   |
+| donkeys                |
+| hamsters               |
+| horses                 |
++------------------------+
+6 rows in set (0,01 sec)
+
+mysql> create table `horses_donkeys` (
+    -> id int unsigned not null auto_increment unique,
+    -> `name`varchar(50) not null,
+    -> `commands` varchar(100) not null,
+    -> `birthday` date not null,
+    -> `animal_class_id` int unsigned not null,
+    -> `species` varchar(10) not null,
+    -> primary key (`id`)
+    -> );
+Query OK, 0 rows affected (0,04 sec)
+
+mysql> show tables from mans_friends;
++------------------------+
+| Tables_in_mans_friends |
++------------------------+
+| animals                |
+| cats                   |
+| dogs                   |
+| donkeys                |
+| hamsters               |
+| horses                 |
+| horses_donkeys         |
++------------------------+
+7 rows in set (0,01 sec)
+
+mysql> insert into `horses_donkeys` (`name`, `commands`, `birthday`, `animal_class_id`, `species`)
+    -> select `name`, `commands`, `birthday`, `animals_class_id`, 'horse' as `species`
+    -> from `horses`;
+Query OK, 3 rows affected (0,02 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> select * from horses_donkeys;
++----+---------+--------------+------------+-----------------+---------+
+| id | name    | commands     | birthday   | animal_class_id | species |
++----+---------+--------------+------------+-----------------+---------+
+|  1 | Barbaro | Gallop, Jump | 2020-08-09 |               2 | horse   |
+|  2 | Whisky  | Gallop, Trot | 2021-07-19 |               2 | horse   |
+|  3 | Took    | Gallop       | 2022-11-22 |               2 | horse   |
++----+---------+--------------+------------+-----------------+---------+
+3 rows in set (0,00 sec)
+
+mysql> insert into `horses_donkeys` (`name`, `commands`, `birthday`, `animal_class_id`, `species`)
+    -> select `name`, `commands`, `birthday`, `animals_class_id`, 'donkey' as `species`
+    -> from `donkeys`;
+Query OK, 2 rows affected (0,02 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> select * from horses_donkeys;
++----+---------+--------------+------------+-----------------+---------+
+| id | name    | commands     | birthday   | animal_class_id | species |
++----+---------+--------------+------------+-----------------+---------+
+|  1 | Barbaro | Gallop, Jump | 2020-08-09 |               2 | horse   |
+|  2 | Whisky  | Gallop, Trot | 2021-07-19 |               2 | horse   |
+|  3 | Took    | Gallop       | 2022-11-22 |               2 | horse   |
+|  4 | Bob     | Carry        | 2021-11-12 |               2 | donkey  |
+|  5 | Moon    | Follow       | 2021-10-23 |               2 | donkey  |
++----+---------+--------------+------------+-----------------+---------+
+5 rows in set (0,00 sec)

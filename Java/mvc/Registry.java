@@ -1,10 +1,10 @@
 package mvc;
 
-import animals.Animal;
-import impl.Reg;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import animals.Animal;
+import impl.Reg;
 
 public class Registry implements Reg {
     private List<Animal> animals;

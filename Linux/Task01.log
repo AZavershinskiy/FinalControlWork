@@ -1,0 +1,29 @@
+Task 1:
+andrey@utm-vm:~$ mkdir fcw
+
+andrey@utm-vm:~$ cd fcw/
+
+andrey@utm-vm:~/fcw$ cat > pet
+dogs, cats, hamsters
+^C
+
+andrey@utm-vm:~/fcw$ cat pet
+dogs, cats, hamsters
+
+andrey@utm-vm:~/fcw$ cat > pack
+horses, camels, donkeys
+^C
+
+andrey@utm-vm:~/fcw$ cat pack 
+horses, camels, donkeys
+
+andrey@utm-vm:~/fcw$ cat pet >> pack 
+
+andrey@utm-vm:~/fcw$ cat pack 
+horses, camels, donkeys
+dogs, cats, hamsters
+
+andrey@utm-vm:~/fcw$ mv pack mens_friends
+andrey@utm-vm:~/fcw$ cat mens_friends 
+horses, camels, donkeys
+dogs, cats, hamsters

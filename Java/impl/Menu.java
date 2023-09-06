@@ -1,8 +1,8 @@
 package impl;
 
-import animals.Animal;
-
 import java.util.List;
+
+import animals.Animal;
 
 public interface Menu {
     void showMenu();

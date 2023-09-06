@@ -1,4 +1,5 @@
-Meower;22.07.2016;eat/;Pet;Cat
-Hermit;5.05.2020;Stay/Down/Go/Stop/;Pack;Camel
-Jack;11.03.2022;Go/Stop/;Pack;Horse
-Woofer;28.02.2023;Sit/Speak/Eat/Stop/;Pet;Dog
+Jimbo;15.05.2020;Sit/Stay/Fetch/;Pet;Dog
+Homm;11.02.2023;Run/;Pet;Hamster
+Mikka;16.06.2020;Eat/Sleep/;Pet;Cat
+Bob;12.11.2021;Carry/;Pack;Donkey
+Barbaro;9.08.2020;Gallop/Jump/;Pack;Horse
